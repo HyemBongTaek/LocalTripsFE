@@ -4,6 +4,7 @@ import styles from "./_Map.module.scss";
 import { motion } from "framer-motion";
 
 const Map: React.FC = () => {
+  const [gwanju, setGwanju] = useState(false);
   const [gangwon, setGangwon] = useState<boolean>(false);
   const [gyeonggi, setGyeonggi] = useState(false);
   const [seoul, setSeoul] = useState(false);
@@ -17,10 +18,40 @@ const Map: React.FC = () => {
   const [gsnam, setGsnam] = useState(false);
   const [busan, setBusan] = useState(false);
   const [ulsan, setUlsan] = useState(false);
+  const [sejong, setSejong] = useState(false);
+  const [daejeon, setDaejeon] = useState(false);
+  const [jeju, setJeju] = useState(false);
+  const [ullengdo, setUllengdo] = useState(false);
+  const [dokdo, setDokdo] = useState(false);
+
+
+  const dokdoClick = () => {
+    setDokdo(dokdo => !dokdo)
+  }
+
+  const ullengdoClick = () => {
+    setUllengdo(ullengdo => !ullengdo);
+  }
+
+  const jejuClick = () => {
+    setJeju(jeju => !jeju);
+  }
+
+  const daejeonClick = () => {
+    setDaejeon(daejeon => !daejeon);
+  }
+
+  const sejongClick = () => {
+    setSejong(sejong => !sejong);
+  }
+
+  const gwanjuClick = () => {
+    setGwanju((gwanju) => !gwanju);
+  };
 
   const ulsanClick = () => {
-    setUlsan(ulsan => !ulsan);
-  }
+    setUlsan((ulsan) => !ulsan);
+  };
 
   const busanClick = () => {
     setBusan((busan) => !busan);
@@ -132,7 +163,21 @@ const Map: React.FC = () => {
               id={busan ? styles.color_busan : styles.busan}
               onClick={busanClick}
             />
-            <path id={ulsan? styles.color_ulsan :  styles.ulsan} onClick={ulsanClick}/>
+            <path
+              id={ulsan ? styles.color_ulsan : styles.ulsan}
+              onClick={ulsanClick}
+            />
+            <path
+              id={gwanju ? styles.color_gwanju : styles.gwanju}
+              onClick={gwanjuClick}
+            />
+            <path id={sejong? styles.color_sejong : styles.sejong}
+                  onClick={sejongClick}/>
+            <path id ={daejeon? styles.color_daejeon : styles.daejeon}
+                  onClick={daejeonClick}/>
+            <path id ={jeju? styles.color_jeju : styles.jeju} onClick={jejuClick}/>
+            <path id ={ullengdo? styles.color_ullengdo : styles.ullengdo} onClick={ullengdoClick}/>
+            <path id={dokdo? styles.color_dokdo : styles.dokdo} onClick={dokdoClick}/>
           </g>
         </svg>
       </div>
