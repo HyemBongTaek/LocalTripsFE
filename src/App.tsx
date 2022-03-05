@@ -1,13 +1,18 @@
-import React from 'react';
-import {Gangwon} from "./common/image/mapIndex";
-import './App.css';
+import React from "react";
+
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Map from "./components/map/Map";
 
 function App() {
   return (
- <>
- <h1>지도를그리자</h1>
-     <img src={Gangwon} alt="Gangwon-do"/>
- </>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Map />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
