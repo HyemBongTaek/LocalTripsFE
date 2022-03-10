@@ -17,7 +17,7 @@ const MapArea: React.FC<MapAreaTypes> = () => {
   console.log()
   const dispatch = useAppDispatch();
 
-  const [gwanju, setGwanju] = useState(false);
+  const [gwangju, setGwangju] = useState(false);
   const [gangwon, setGangwon] = useState<boolean>(false);
   const [gyeonggi, setGyeonggi] = useState(false);
   const [seoul, setSeoul] = useState(false);
@@ -73,10 +73,10 @@ const MapArea: React.FC<MapAreaTypes> = () => {
     }));
   };
 
-  const gwanjuClick = () => {
-    setGwanju((gwanju) => !gwanju);
+  const gwangjuClick = () => {
+    setGwangju((gwangju) => !gwangju);
     dispatch(choiceMap({
-      area: "gwanju",
+      area: "gwangju",
     }));
   };
 
@@ -228,8 +228,8 @@ const MapArea: React.FC<MapAreaTypes> = () => {
               onClick={ulsanClick}
             />
             <path
-              id={gwanju ? styles.color_gwanju : styles.gwanju}
-              onClick={gwanjuClick}
+              id={gwangju ? styles.color_gwangju: styles.gwangju}
+              onClick={gwangjuClick}
             />
             <path
               id={sejong ? styles.color_sejong : styles.sejong}

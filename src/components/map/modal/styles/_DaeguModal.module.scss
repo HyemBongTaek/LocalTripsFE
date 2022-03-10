@@ -1,3 +1,7 @@
+@import "../../MapArea.module";
+@import "../../../../common/styles/variables";
+@import "Modal";
+
 #color_daegu {
   fill: $daegu;
   transform: translate(167px, 236px);

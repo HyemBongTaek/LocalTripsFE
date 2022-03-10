@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/_JejuModal.module.scss";
+import styles from "./styles/_IslandModal.module.scss";
 import { useAppDispatch } from "../../../redux/store.hook";
 import { choiceMap } from "../../../redux/map/mapSlice";
 import { MapTypes } from "../../../Types/Types";

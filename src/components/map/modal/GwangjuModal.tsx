@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import styles from "./styles/_JbModal.module.scss";
+import styles from "./styles/_JnModal.module.scss";
 import { useAppDispatch, useAppSelect } from "../../../redux/store.hook";
 import { choiceMap } from "../../../redux/map/mapSlice";
 import { MapTypes } from "../../../Types/Types";
 
-const SejongModal: React.FC<MapTypes> = () => {
+const GwangjuModal: React.FC<MapTypes> = () => {
   const dispatch = useAppDispatch();
 
   const outSideHandler = () => {
@@ -47,7 +47,7 @@ const SejongModal: React.FC<MapTypes> = () => {
             </div>
             <svg width={700} height={1000}>
               <g>
-                <path id={styles.color_sejong} />
+                <path id={styles.color_gwangju} />
               </g>
             </svg>
           </div>
@@ -58,4 +58,4 @@ const SejongModal: React.FC<MapTypes> = () => {
   );
 };
 
-export default SejongModal;
+export default GwangjuModal;
