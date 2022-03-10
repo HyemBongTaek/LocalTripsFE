@@ -1,11 +1,10 @@
 import React from "react";
-import styles from "./styles/_JejuModal.module.scss";
+import styles from "./styles/_JnModal.module.scss";
 import { useAppDispatch } from "../../../redux/store.hook";
 import { choiceMap } from "../../../redux/map/mapSlice";
 import { MapTypes } from "../../../Types/Types";
-import { haenyeo, hallasan } from "./icon/JejuIcon";
 
-const JejuModal: React.FC<MapTypes> = () => {
+const JnModal: React.FC<MapTypes> = () => {
   const dispatch = useAppDispatch();
 
   const outSideHandler = () => {
@@ -22,28 +21,33 @@ const JejuModal: React.FC<MapTypes> = () => {
       <div>
         <div className={styles.modal_container}>
           <div className={styles.todo_modal}>
-            <div className={styles.halla_mountain}>
+            <div id={styles.damyang_juknokwon}>
               <label>
-                <img src={hallasan} alt="hallasan" />
                 <input type="checkbox" checked={true} />
-                한라산
+                담양 죽녹원
               </label>
             </div>
-            <div className={styles.sungsan}>
+            <div className={styles.bosung_greentea}>
               <label>
-                <input type="checkbox" checked={true}/>
-                성산일출봉
+                <input type="checkbox" checked={true} />
+                보성 녹차밭
               </label>
             </div>
-            <div className={styles.olleh_avenue}>
+            <div className={styles.scbay}>
               <label>
-                <input type="checkbox" checked={true}/>
-                올레길
+                <input type="checkbox" checked={true} />
+                순천만습지
               </label>
             </div>
-            <svg width={500} height={1000}>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                여수밤바다
+              </label>
+            </div>
+            <svg width={700} height={1000}>
               <g>
-                <path id={styles.color_jeju} />
+                <path id={styles.color_jn} />
               </g>
             </svg>
           </div>
@@ -54,4 +58,4 @@ const JejuModal: React.FC<MapTypes> = () => {
   );
 };
 
-export default JejuModal;
+export default JnModal;

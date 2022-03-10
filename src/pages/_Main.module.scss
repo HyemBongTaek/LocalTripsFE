@@ -2,6 +2,14 @@
 
 .main {
   display: grid;
-  width: 100%;
+  width: 1500px;
   grid-template-columns: repeat(2, 30% 70%);
+  margin: auto;
+  & > div:nth-child(1){
+    border: 1px solid red;
+  }
+  & > div:nth-child(2){
+    border: 1px solid red;
+    margin-left: -1000px;
+  }
 }

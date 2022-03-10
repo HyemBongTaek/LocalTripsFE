@@ -6,9 +6,15 @@ import JejuModal from "./modal/JejuModal";
 import {useAppDispatch} from "../../redux/store.hook";
 import {choiceMap} from "../../redux/map/mapSlice";
 
+export interface MapAreaTypes {
+  mapList: string[],
+  setMapList : string[]|any,
+}
 
-const MapArea: React.FC = () => {
 
+const MapArea: React.FC<MapAreaTypes> = () => {
+
+  console.log()
   const dispatch = useAppDispatch();
 
   const [gwanju, setGwanju] = useState(false);
@@ -33,10 +39,16 @@ const MapArea: React.FC = () => {
 
   const dokdoClick = () => {
     setDokdo((dokdo) => !dokdo);
+    dispatch(choiceMap({
+      area: "dokdo",
+    }));
   };
 
   const ullengdoClick = () => {
     setUllengdo((ullengdo) => !ullengdo);
+    dispatch(choiceMap({
+      area: "ullengdo",
+    }));
   };
 
   const jejuClick = () => {
@@ -49,76 +61,114 @@ const MapArea: React.FC = () => {
 
   const daejeonClick = () => {
     setDaejeon((daejeon) => !daejeon);
+    dispatch(choiceMap({
+      area: "daejeon",
+    }));
   };
 
   const sejongClick = () => {
     setSejong((sejong) => !sejong);
+    dispatch(choiceMap({
+      area: "sejong",
+    }));
   };
 
   const gwanjuClick = () => {
     setGwanju((gwanju) => !gwanju);
+    dispatch(choiceMap({
+      area: "gwanju",
+    }));
   };
 
   const ulsanClick = () => {
     setUlsan((ulsan) => !ulsan);
+    dispatch(choiceMap({
+      area: "ulsan",
+    }));
   };
 
   const busanClick = () => {
     setBusan((busan) => !busan);
-    console.log("부산", busan);
-  };
+    dispatch(choiceMap({
+      area: "busan",
+    }));  };
 
   const jnClick = () => {
     setJn((jn) => !jn);
     console.log("전남", jn);
+    dispatch(choiceMap({
+      area: "jn",
+    }));
   };
 
   const gsnamClick = () => {
     setGsnam((gsnam) => !gsnam);
-    console.log("경상남도", gsnam);
+    dispatch(choiceMap({
+      area: "gsnam",
+    }));
   };
 
   const chnamClick = () => {
     setChnam((chnam) => !chnam);
     console.log("충남", chnam);
+    dispatch(choiceMap({
+      area: "chnam",
+    }));
   };
 
   const jbClick = () => {
     setJb((jb) => !jb);
     console.log("전북", jb);
+    dispatch(choiceMap({
+      area: "jb",
+    }));
   };
 
   const daeguClick = () => {
     setDaegu((daegu) => !daegu);
-    console.log("대구", daegu);
+    dispatch(choiceMap({
+      area: "daegu",
+    }));
   };
 
   const gsbukClick = () => {
     setGsbuk((gsbuk) => !gsbuk);
-    console.log("경상북도", gsbuk);
+    dispatch(choiceMap({
+      area: "gsbuk",
+    }));
   };
 
   const incheonClick = () => {
     setIncheon((incheon) => !incheon);
-    console.log("인천", incheon);
+    dispatch(choiceMap({
+      area: "incheon",
+    }));
   };
 
   const gangwonClick = () => {
     setGangwon((gangwon) => !gangwon);
-    console.log("강원도", gangwon);
+    dispatch(choiceMap({
+      area: "gangwon",
+    }));
   };
   const gyeonggiClick = () => {
     setGyeonggi((gyeonggi) => !gyeonggi);
-    console.log("경기", gyeonggi);
-  };
+    dispatch(choiceMap({
+      area: "gyeonggi",
+    }));  };
   const seoulClick = () => {
     setSeoul((seoul) => !seoul);
-    console.log("서울", seoul);
+    dispatch(choiceMap({
+      area: "seoul",
+    }));
   };
 
   const chbukClick = () => {
     setChbuk((chbuk) => !chbuk);
     console.log("충북", chbuk);
+    dispatch(choiceMap({
+      area: "chbuk",
+    }));
   };
 
   return (
@@ -152,7 +202,7 @@ const MapArea: React.FC = () => {
               onClick={chbukClick}
             />
             <path
-              id={chnam ? styles.color_chnam : styles.chnum}
+              id={chnam ? styles.color_chnam : styles.chnam}
               onClick={chnamClick}
             />
             <path
