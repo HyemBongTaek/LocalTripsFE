@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./styles/_IslandModal.module.scss";
 import { useAppDispatch } from "../../../redux/store.hook";
 import { choiceMap } from "../../../redux/map/mapSlice";
@@ -7,6 +7,17 @@ import { haenyeo, hallasan } from "./icon/JejuIcon";
 
 const JejuModal: React.FC<MapTypes> = () => {
   const dispatch = useAppDispatch();
+  // const [checkedInputs, setCheckedInputs] = useState([]);
+  //
+  // const changeHandler = (checked:boolean|any[], id:string|string[]) => {
+  //   if (checked) {
+  //     setCheckedInputs([...checkedInputs, id]);
+  //   } else {
+  //     // 체크 해제
+  //     setCheckedInputs(checkedInputs.filter((el) => el !== id));
+  //   }
+  // };
+
 
   const outSideHandler = () => {
     dispatch(
@@ -25,7 +36,13 @@ const JejuModal: React.FC<MapTypes> = () => {
             <div className={styles.halla_mountain}>
               <label>
                 <img src={hallasan} alt="hallasan" />
-                <input type="checkbox" checked={true} />
+                <input id="한라산" type="checkbox"
+                       checked={true}
+                       // onChange={(e)=>{
+                       //   changeHandler(e.currentTarget.checked, "한라산")
+                       // }}
+                       // checked={!!checkedInputs.includes("한라산")}
+                />
                 한라산
               </label>
             </div>

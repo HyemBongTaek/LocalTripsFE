@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./styles/_DaejeonModal.module.scss";
+import styles from "./styles/_DokdoModal.module.scss";
 import { useAppDispatch, useAppSelect } from "../../../redux/store.hook";
 import { choiceMap } from "../../../redux/map/mapSlice";
 import { MapTypes } from "../../../Types/Types";

@@ -24,13 +24,13 @@ const BusanModal: React.FC<MapTypes> = () => {
             <div id={styles.junju}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
+                해운대
               </label>
             </div>
             <div className={styles.imsil}>
               <label>
                 <input type="checkbox" checked={true} />
-                임실 치즈마을
+                해인사
               </label>
             </div>
             <div className={styles.byeonsan}>
@@ -42,7 +42,31 @@ const BusanModal: React.FC<MapTypes> = () => {
             <div className={styles.yeosu_night}>
               <label>
                 <input type="checkbox" checked={true} />
-                여수밤바다
+                용궁사
+              </label>
+            </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                태종대
+              </label>
+            </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                광안리
+              </label>
+            </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                흰여울문화마을
+              </label>
+            </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                부산국제시장
               </label>
             </div>
             <svg width={700} height={1000}>
