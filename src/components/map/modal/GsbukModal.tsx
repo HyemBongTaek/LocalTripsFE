@@ -21,28 +21,28 @@ const GsbukModal: React.FC<MapTypes> = () => {
       <div>
         <div className={styles.modal_container}>
           <div className={styles.todo_modal}>
-            <div id={styles.junju}>
+            <div id={styles.andong}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
+                안동 하회마을
               </label>
             </div>
             <div className={styles.imsil}>
               <label>
                 <input type="checkbox" checked={true} />
-                임실 치즈마을
+                영덕
               </label>
             </div>
             <div className={styles.byeonsan}>
               <label>
                 <input type="checkbox" checked={true} />
-                변산 반도
+                경주 불국사
               </label>
             </div>
             <div className={styles.yeosu_night}>
               <label>
                 <input type="checkbox" checked={true} />
-                여수밤바다
+                경주 첨성대
               </label>
             </div>
             <svg width={700} height={1000}>

@@ -24,25 +24,25 @@ const GyeonggiModal: React.FC<MapTypes> = () => {
             <div id={styles.junju}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
+                수원화성
               </label>
             </div>
             <div className={styles.imsil}>
               <label>
                 <input type="checkbox" checked={true} />
-                임실 치즈마을
+                에버랜드
               </label>
             </div>
             <div className={styles.byeonsan}>
               <label>
                 <input type="checkbox" checked={true} />
-                변산 반도
+                 가평 아침고요수목원
               </label>
             </div>
             <div className={styles.yeosu_night}>
               <label>
                 <input type="checkbox" checked={true} />
-                여수밤바다
+                파주 헤이리예술마을
               </label>
             </div>
             <svg width={700} height={1000}>

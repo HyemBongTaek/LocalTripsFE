@@ -24,7 +24,7 @@ const UlsanModal: React.FC<MapTypes> = () => {
             <div id={styles.junju}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
+              간절곶
               </label>
             </div>
             <div className={styles.imsil}>
