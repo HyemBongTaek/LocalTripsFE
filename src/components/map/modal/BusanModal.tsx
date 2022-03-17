@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styles from "./styles/_BusanModal.module.scss";
 import { useAppDispatch, useAppSelect } from "../../../redux/store.hook";
-import { choiceMap } from "../../../redux/map/mapSlice";
+import {addCheck, choiceMap} from "../../../redux/map/mapSlice";
 import { MapTypes } from "../../../Types/Types";
 
 const BusanModal: React.FC<MapTypes> = () => {
   const dispatch = useAppDispatch();
+  const [checkedInputs, setCheckedInputs] = useState<any>([]);
 
   const outSideHandler = () => {
     dispatch(
@@ -14,6 +15,19 @@ const BusanModal: React.FC<MapTypes> = () => {
         isModal: false,
       })
     );
+    dispatch(
+        addCheck({
+          checkedInputs,
+        })
+    );
+  };
+  const changeHandler = (checked: boolean | any[], id: string | string[]) => {
+    if (checked) {
+      setCheckedInputs([...checkedInputs, id]);
+    } else {
+      // 체크 해제
+      setCheckedInputs(checkedInputs.filter((el) => el !== id));
+    }
   };
 
   return (
@@ -23,49 +37,79 @@ const BusanModal: React.FC<MapTypes> = () => {
           <div className={styles.todo_modal}>
             <div id={styles.junju}>
               <label>
-                <input type="checkbox" checked={true} />
+                <input
+                  id="해운대"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "해운대");
+                  }}
+                  checked={checkedInputs.includes("해운대")}
+                />
                 해운대
               </label>
             </div>
             <div className={styles.imsil}>
               <label>
-                <input type="checkbox" checked={true} />
+                <input
+                  id="해인사"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "해인사");
+                  }}
+                  checked={checkedInputs.includes("해인사")}
+                />
                 해인사
               </label>
             </div>
             <div className={styles.byeonsan}>
               <label>
-                <input type="checkbox" checked={true} />
-                변산 반도
-              </label>
-            </div>
-            <div className={styles.yeosu_night}>
-              <label>
-                <input type="checkbox" checked={true} />
+                <input
+                  id="용궁사"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "용궁사");
+                  }}
+                  checked={checkedInputs.includes("용궁사")}
+                />
                 용궁사
               </label>
             </div>
             <div className={styles.yeosu_night}>
               <label>
-                <input type="checkbox" checked={true} />
-                태종대
-              </label>
-            </div>
-            <div className={styles.yeosu_night}>
-              <label>
-                <input type="checkbox" checked={true} />
+                <input
+                  id="광안리"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "광안리");
+                  }}
+                  checked={checkedInputs.includes("광안리")}
+                />
                 광안리
               </label>
             </div>
             <div className={styles.yeosu_night}>
               <label>
-                <input type="checkbox" checked={true} />
+                <input
+                  id="흰여울문화마을"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "흰여울문화마을");
+                  }}
+                  checked={checkedInputs.includes("흰여울문화마을")}
+                />
                 흰여울문화마을
               </label>
             </div>
             <div className={styles.yeosu_night}>
               <label>
-                <input type="checkbox" checked={true} />
+                <input
+                  id="부산국제시장"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "부산국제시장");
+                  }}
+                  checked={checkedInputs.includes("부산국제시장")}
+                />
                 부산국제시장
               </label>
             </div>

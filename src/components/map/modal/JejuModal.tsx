@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./styles/_IslandModal.module.scss";
 import { useAppDispatch } from "../../../redux/store.hook";
-import { choiceMap } from "../../../redux/map/mapSlice";
+import { addCheck, choiceMap } from "../../../redux/map/mapSlice";
 import { MapTypes } from "../../../Types/Types";
 import { hallasan } from "./icon/JejuIcon";
 
@@ -11,7 +11,7 @@ const JejuModal: React.FC<MapTypes> = () => {
 
   console.log(checkedInputs);
 
-  const changeHandler = (checked:boolean|any[], id:string|string[]) => {
+  const changeHandler = (checked: boolean | any[], id: string | string[]) => {
     if (checked) {
       setCheckedInputs([...checkedInputs, id]);
     } else {
@@ -20,12 +20,16 @@ const JejuModal: React.FC<MapTypes> = () => {
     }
   };
 
-
   const outSideHandler = () => {
     dispatch(
       choiceMap({
         site: "",
         isModal: false,
+      })
+    );
+    dispatch(
+      addCheck({
+        checkedInputs,
       })
     );
   };
@@ -38,33 +42,39 @@ const JejuModal: React.FC<MapTypes> = () => {
             <div className={styles.halla_mountain}>
               <label>
                 <img src={hallasan} alt="hallasan" />
-                <input id="한라산" type="checkbox"
-                       onChange={(e)=>{
-                         changeHandler(e.currentTarget.checked, "한라산")
-                       }}
-                       checked={checkedInputs.includes("한라산")}
+                <input
+                  id="한라산"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "한라산");
+                  }}
+                  checked={checkedInputs.includes("한라산")}
                 />
                 한라산
               </label>
             </div>
             <div className={styles.sungsan}>
               <label>
-                <input id="성산일출봉" type="checkbox"
-                       onChange={(e)=>{
-                         changeHandler(e.currentTarget.checked, "성산일출봉")
-                       }}
-                       checked={checkedInputs.includes("성산일출봉")}
+                <input
+                  id="성산일출봉"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "성산일출봉");
+                  }}
+                  checked={checkedInputs.includes("성산일출봉")}
                 />
                 성산일출봉
               </label>
             </div>
             <div className={styles.olleh_avenue}>
               <label>
-                <input id="올레길" type="checkbox"
-                       onChange={(e)=>{
-                         changeHandler(e.currentTarget.checked, "올레길")
-                       }}
-                       checked={checkedInputs.includes("올레길")}
+                <input
+                  id="올레길"
+                  type="checkbox"
+                  onChange={(e) => {
+                    changeHandler(e.currentTarget.checked, "올레길");
+                  }}
+                  checked={checkedInputs.includes("올레길")}
                 />
                 올레길
               </label>
