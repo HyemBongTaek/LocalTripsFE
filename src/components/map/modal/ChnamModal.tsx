@@ -24,25 +24,19 @@ const ChnamModal: React.FC<MapTypes> = () => {
             <div id={styles.junju}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
+                태안 안면도
               </label>
             </div>
             <div className={styles.imsil}>
               <label>
                 <input type="checkbox" checked={true} />
-                임실 치즈마을
+                공주 무령왕릉
               </label>
             </div>
             <div className={styles.byeonsan}>
               <label>
                 <input type="checkbox" checked={true} />
-                변산 반도
-              </label>
-            </div>
-            <div className={styles.yeosu_night}>
-              <label>
-                <input type="checkbox" checked={true} />
-                여수밤바다
+                서산 해미읍성
               </label>
             </div>
             <svg width={700} height={1000}>

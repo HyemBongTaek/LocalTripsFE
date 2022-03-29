@@ -26,9 +26,19 @@ export const MapSlice = createSlice({
             state.isModal = !state.isModal;
         },
         addCheck(state, action:any){
-            const mapArray = action.payload.checkedInputs;
-            state.mapList.push(mapArray);
-            state.checkList.concat(action.payload.checkedInputs);
+
+            console.log("이거",action.payload);
+            state.mapList = [...state.mapList, action.payload];
+            // state.checkList = [...state.mapList, ...action.payload];
+            // const mapArray = action.payload.checkedInputs;
+            // state.mapList.push(mapArray);
+            // if(state.checkList === ""){
+            //     state.checkList = action.payload.checkedInputs;
+            // }else {
+            //     state.checkList = [...state.checkList, action.payload.checkedInputs];
+            //     state.mapList = state.checkList[0].concat(state.checkList[1]);
+            // }
+
             //
             // void state.mapList.push(action.payload.checkedInputs);
             // if(state.mapList !== ""){

@@ -45,6 +45,18 @@ const GangwonModal: React.FC<MapTypes> = () => {
                 춘천 남이섬
               </label>
             </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                경포대
+              </label>
+            </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                경포대
+              </label>
+            </div>
             <svg width={700} height={1000}>
               <g>
                 <path id={styles.color_gangwon} />

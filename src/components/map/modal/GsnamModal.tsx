@@ -24,25 +24,25 @@ const GsnamModal: React.FC<MapTypes> = () => {
             <div id={styles.junju}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
+                진주성
               </label>
             </div>
             <div className={styles.imsil}>
               <label>
                 <input type="checkbox" checked={true} />
-                임실 치즈마을
+                합천해인사
               </label>
             </div>
             <div className={styles.byeonsan}>
               <label>
                 <input type="checkbox" checked={true} />
-                변산 반도
+               통영 소매물도
               </label>
             </div>
             <div className={styles.yeosu_night}>
               <label>
                 <input type="checkbox" checked={true} />
-                여수밤바다
+                통영 동피랑마을
               </label>
             </div>
             <svg width={700} height={1000}>

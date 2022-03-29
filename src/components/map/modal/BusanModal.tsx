@@ -17,7 +17,7 @@ const BusanModal: React.FC<MapTypes> = () => {
     );
     dispatch(
         addCheck({
-          checkedInputs,
+          busan: checkedInputs,
         })
     );
   };

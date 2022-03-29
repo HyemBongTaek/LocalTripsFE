@@ -24,25 +24,7 @@ const UllengdoModal: React.FC<MapTypes> = () => {
             <div id={styles.junju}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
-              </label>
-            </div>
-            <div className={styles.imsil}>
-              <label>
-                <input type="checkbox" checked={true} />
-                임실 치즈마을
-              </label>
-            </div>
-            <div className={styles.byeonsan}>
-              <label>
-                <input type="checkbox" checked={true} />
-                변산 반도
-              </label>
-            </div>
-            <div className={styles.yeosu_night}>
-              <label>
-                <input type="checkbox" checked={true} />
-                여수밤바다
+                울릉도
               </label>
             </div>
             <svg width={700} height={1000}>

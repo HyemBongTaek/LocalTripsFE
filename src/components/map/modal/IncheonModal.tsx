@@ -24,13 +24,13 @@ const IncheonModal: React.FC<MapTypes> = () => {
             <div id={styles.junju}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
+                인천 차이나타운
               </label>
             </div>
             <div className={styles.imsil}>
               <label>
                 <input type="checkbox" checked={true} />
-                임실 치즈마을
+                송도 센트럴파크
               </label>
             </div>
             <div className={styles.byeonsan}>

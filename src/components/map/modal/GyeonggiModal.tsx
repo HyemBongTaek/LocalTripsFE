@@ -27,6 +27,12 @@ const GyeonggiModal: React.FC<MapTypes> = () => {
                 수원화성
               </label>
             </div>
+            <div id={styles.junju}>
+              <label>
+                <input type="checkbox" checked={true} />
+                한국민속촌
+              </label>
+            </div>
             <div className={styles.imsil}>
               <label>
                 <input type="checkbox" checked={true} />

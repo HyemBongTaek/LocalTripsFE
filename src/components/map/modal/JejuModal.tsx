@@ -29,7 +29,7 @@ const JejuModal: React.FC<MapTypes> = () => {
     );
     dispatch(
       addCheck({
-        checkedInputs,
+        jeju : checkedInputs,
       })
     );
   };

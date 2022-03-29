@@ -24,25 +24,43 @@ const SeoulModal: React.FC<MapTypes> = () => {
             <div id={styles.junju}>
               <label>
                 <input type="checkbox" checked={true} />
-                전주 한옥마을
+                서울타워
               </label>
             </div>
             <div className={styles.imsil}>
               <label>
                 <input type="checkbox" checked={true} />
-                임실 치즈마을
+                63빌딩
               </label>
             </div>
             <div className={styles.byeonsan}>
               <label>
                 <input type="checkbox" checked={true} />
-                변산 반도
+                한강
               </label>
             </div>
             <div className={styles.yeosu_night}>
               <label>
                 <input type="checkbox" checked={true} />
-                여수밤바다
+                명동
+              </label>
+            </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                동대문
+              </label>
+            </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                인사동
+              </label>
+            </div>
+            <div className={styles.yeosu_night}>
+              <label>
+                <input type="checkbox" checked={true} />
+                롯데월드타워
               </label>
             </div>
             <svg width={700} height={1000}>
